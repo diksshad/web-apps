@@ -1,2 +1,10 @@
+<% fillings = ["veggies", "not veggies"] %> <!-- embedded ruby code -->
+
 <H1>Why does Brain love Tacos so much?</H1>
 <H2>Unclear.</H2>
+
+<ul>
+  <% for filling in fillings %> <!-- this an erb tag-->
+    <li> <%= filling %> Tacos</li>
+  <%end%>
+</ul>

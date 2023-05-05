@@ -1,0 +1,19 @@
+<% 
+  contacts = Contact.all
+  companies= Company.all
+ %>
+
+<h1>Contacts</h1>
+
+<%= contacts.inspect %>
+
+<ul>
+  <% for contact in contacts%>
+    <% company = Company.find_by({"id" => contact["company_id"]})%>
+    <li>
+      <%= contact["first_name"]%> 
+      <%= contact["last_name"]%>  
+      -- <%= company["name"]%>
+    </li> <!--we want mulitple list items-->
+  <% end %>
+</ul>

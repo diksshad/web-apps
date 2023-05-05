@@ -1,0 +1,13 @@
+<% 
+  companies = Company.all
+ %>
+
+<h1>Companies</h1>
+
+<%= companies.inspect %>
+
+<ul>
+  <% for company in companies%>
+  <li><%= company ["name"]%> - <%= company ["city"]%> </li>
+  <% end %>
+</ul>
